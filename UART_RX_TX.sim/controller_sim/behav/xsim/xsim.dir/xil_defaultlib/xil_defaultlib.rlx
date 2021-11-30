@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/controller_sim/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/controller_sim/new/tb_controller.v,1638083240,verilog,,,,tb_controller,,,,,,,,
+/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/sources_1/imports/UART_RX/uart_rx.v,1638020214,verilog,,/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/sources_1/new/uart_tx.v,,uart_rx,,,,,,,,
+/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/sources_1/imports/seven_segment/seven_seg_drive.v,1637955681,systemVerilog,,,,seven_seg_drive,,,,,,,,
+/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/sources_1/new/controller.v,1638083075,verilog,,/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/sources_1/imports/UART_RX/uart_rx.v,,controller,,,,,,,,
+/home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.srcs/sources_1/new/uart_tx.v,1638042241,verilog,,,,uart_tx,,,,,,,,

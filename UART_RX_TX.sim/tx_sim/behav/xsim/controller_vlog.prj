@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../UART_RX_TX.srcs/sources_1/imports/uart/uart_rx.v" \
+
+sv xil_defaultlib  \
+"../../../../UART_RX_TX.srcs/sources_1/imports/seven_segment/seven_seg_drive.v" \
+
+verilog xil_defaultlib  \
+"../../../../UART_RX_TX.srcs/sources_1/new/controller.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

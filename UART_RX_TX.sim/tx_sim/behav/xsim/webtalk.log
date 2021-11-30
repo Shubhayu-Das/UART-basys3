@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Nov 27 12:00:25 2021
+# Process ID: 644252
+# Current directory: /home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/tx_sim/behav/xsim
+# Command line: wbtcv -mode batch -source /home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/tx_sim/behav/xsim/xsim.dir/tb_uart_tx_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/tx_sim/behav/xsim/webtalk.log
+# Journal file: /home/shubhayu/Sem 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/tx_sim/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/shubhayu/Sem -notrace
+source 7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/tx_sim/behav/xsim/xsim.dir/tb_uart_tx_behav/webtalk/xsim_webtalk.tcl -notrace
+couldn't read file "7/FPGA/Vivado/UART_RX_TX/UART_RX_TX.sim/tx_sim/behav/xsim/xsim.dir/tb_uart_tx_behav/webtalk/xsim_webtalk.tcl": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Sat Nov 27 12:00:25 2021...
