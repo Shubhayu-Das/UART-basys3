@@ -1,5 +1,5 @@
 # UART RX and TX cores
-### Implementations targetted for the Basys 3 dev board
+### Implementations targeted for the Basys 3 dev board
 
 ------------------
 
@@ -9,6 +9,11 @@ This project aims to implement a UART RX and TX module to appreciate the working
 
 Iniitally, I intended to utilize to transfer data from the PC to the FPGA, but UART is waay too slow for this(duh). I will try to implement SPI and then eventually USB 2.0 for this purpose.(wish me luck, the USB 2.0 specification is a scary 650 pages).
 
+**Sidenotes:**
+1. This was originally a course assignment, where we were provided with someone else's code. I choose to make things hard(and therefore fun) for myself and implement everything from scratch, in my own way.
+2. \[update\] My stupid self realized that USB works on 5V. My FPGA's IO is limited to 3.3V(cross-check this). So I either use a fast enough level shifter, or ditch the project for now. I'm afraid it will have to be the latter.
+3. I actually managed to get VGA working. I am trying to see if I can somehow tranfer enough data at a baud rate of 921600. My current plan is to transfer a scaled down image and then run upscaling algorithms on the FPGA. Killing two birds with one stone.
+
 --------------------
 
 ### Tools required to get this project working
@@ -17,14 +22,23 @@ Iniitally, I intended to utilize to transfer data from the PC to the FPGA, but U
 
 - Vivado 2019.1 or higher
 
-- Python 3.6 or higher. The [pyserial](https://github.com/pyserial/pyserial) library(can be installed using ```pip```).
+- Python 3.6 or higher. The [pyserial](https://github.com/pyserial/pyserial) library(can be installed using ```pip```). *Alternatively*, you can use your favourite terminal emulator.
 
 --------------------
 
 ## Steps for running the project
 
 1. Clone this repository
-2. 
+2. Open the project in Vivado. If you face any toolchain versioning problems, the source files and constraints are available in the ```srcs``` folder. You can manually add in the source files, and the constraints files.
+3. Once you add the ```seven_seg_drive.v``` file, please make sure to set its language to ```SystemVerilog```. Verilog-1995 doesn't support 2D memory blocks, which I am using for a lookup table.
+4. Generate the bitstream and program your FPGA! It should work fine. If not, raise an issue!
+
+------------------------
+
+## Known bugs
+
+1. The timing is very fiddly. If you change the baud rate, everything breaks down. I am working on fixing this. I've got it working at a baud rate of 912600. Will try to generalize the timing, or atleast put a guide on how to tweak things.
+2. The seven segment display doesn't show four digit numbers properly. I swear that the module works by itself. There is something wrong in the controller, where I instantiate the module. I will swap this out for a "scrolling" seven segment display later. I've already got it working, just need to tweak the interface to make it easy to use in other projects.
 
 --------------------
 
@@ -54,6 +68,7 @@ This project was done in steps, so reproducing the simulations is a little troub
 $ tree srcs/ images/
 srcs/
 ├── controller.v        # High level UART RX, TX, 7-seg control module
+├── seven_seg_drive.v   # Controller for the seven segment display
 ├── tb_controller.v     # Test bench for timing of main controller
 ├── tb_uart_rx.v        # RX module's individual testbench
 ├── tb_uart_tx.v        # TX module's individual testbench
